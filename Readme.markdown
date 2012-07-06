@@ -10,7 +10,7 @@ As of [Safari 6](https://developer.apple.com/technologies/safari/whats-new.html)
 ## Installation
 
 1. Install [SIMBL](http://www.culater.net/software/SIMBL/SIMBL.php)
-2. Download the newest version and place it in `~/Library/Application Support/SIMBL/`
+2. [Download the newest version](https://github.com/bencochran/ReaderLater/downloads) and place it in `~/Library/Application Support/SIMBL/`
 3. Restart Safari
 
 ## License
