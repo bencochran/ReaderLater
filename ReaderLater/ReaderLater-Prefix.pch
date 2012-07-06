@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ReaderLater' target in the 'ReaderLater' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
