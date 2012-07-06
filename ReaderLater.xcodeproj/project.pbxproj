@@ -271,7 +271,6 @@
 		B8CA03E915A6689800774EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReaderLater/ReaderLater-Prefix.pch";
 				INFOPLIST_FILE = "ReaderLater/ReaderLater-Info.plist";
