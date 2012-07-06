@@ -9,6 +9,9 @@
 #import "BCReaderLater.h"
 #import "JRSwizzle.h"
 
+#define BCLocalizedString(key, comment) [[NSBundle bundleForClass:[BCReaderLater class]] localizedStringForKey:(key) value:@"" table:nil]
+
+
 @interface BCReaderLater()
 + (NSString *)pluginVersion;
 @end
@@ -78,7 +81,7 @@
 
 - (id)BCReaderLater__toolTipForReaderButtonState:(int)arg1
 {
-    return NSLocalizedString(@"Save to Instapaper", @"Later button tooltip.");
+    return BCLocalizedString(@"Save to Instapaper", @"Later button tooltip.");
 }
 
 @end
@@ -129,7 +132,7 @@
     }
     
     if ([readerButton respondsToSelector:@selector(setTitle:)]) {
-        [readerButton setTitle:NSLocalizedString(@"Later", @"The replacement button title.")];
+        [readerButton setTitle:BCLocalizedString(@"Later", @"The replacement button title.")];
     }
 }
 
