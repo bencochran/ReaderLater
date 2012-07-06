@@ -262,7 +262,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReaderLater/ReaderLater-Prefix.pch";
 				INFOPLIST_FILE = "ReaderLater/ReaderLater-Info.plist";
-				INSTALL_PATH = "/Users/bencochran/Library/Application Support/SIMBL/Plugins";
+				INSTALL_PATH = "${HOME}/Library/Application Support/SIMBL/Plugins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -272,11 +272,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReaderLater/ReaderLater-Prefix.pch";
 				INFOPLIST_FILE = "ReaderLater/ReaderLater-Info.plist";
-				INSTALL_PATH = "/Users/bencochran/Library/Application Support/SIMBL/Plugins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
