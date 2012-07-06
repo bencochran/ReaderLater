@@ -21,14 +21,22 @@
     if (self) {
         NSError *error = nil;
         
-        Class c = NSClassFromString(@"BrowserWindowControllerMac");
-        [c jr_swizzleMethod:@selector(toggleReader:) withMethod:@selector(BCReaderLater_toggleReader:) error:&error];
+        Class class_BrowserWindowControllerMac = NSClassFromString(@"BrowserWindowControllerMac");
+        Class class_ReaderButton = NSClassFromString(@"ReaderButton");
+        [class_BrowserWindowControllerMac jr_swizzleMethod:@selector(toggleReader:) withMethod:@selector(BCReaderLater_toggleReader:) error:&error];
         if (error) {
             NSLog(@"Could not swizzle -[BrowserWindowControllerMac toggleReader:]: %@", error);
         } else {
-            [c jr_swizzleMethod:@selector(updateReaderButton) withMethod:@selector(BCReaderLater_updateReaderButton) error:&error];
+            error = nil;
+            [class_BrowserWindowControllerMac jr_swizzleMethod:@selector(updateReaderButton) withMethod:@selector(BCReaderLater_updateReaderButton) error:&error];
             if (error) {
                 NSLog(@"Could not swizzle -[BrowserWindowControllerMac updateReaderButton]: %@", error);
+            }
+            
+            error = nil;
+            [class_ReaderButton jr_swizzleMethod:@selector(_toolTipForReaderButtonState:) withMethod:@selector(BCReaderLater__toolTipForReaderButtonState:) error:&error];
+            if (error) {
+                NSLog(@"Could not swizzle -[ReaderButton _toolTipForReaderButtonState:]: %@", error);
             }
         }
     }
@@ -59,6 +67,24 @@
 
 @end
 
+
+#pragma mark - ReaderButton
+
+@interface NSButton(BCReaderLater)
+- (id)BCReaderLater__toolTipForReaderButtonState:(int)arg1;
+@end
+
+@implementation NSButton(BCReaderLater)
+
+- (id)BCReaderLater__toolTipForReaderButtonState:(int)arg1
+{
+    return NSLocalizedString(@"Save to Instapaper", @"Later button tooltip.");
+}
+
+@end
+
+
+#pragma mark - BrowserWindowControllerMac
 
 @interface NSWindowController(BCReaderLater)
 - (void)BCReaderLater_toggleReader:(id)arg1;
