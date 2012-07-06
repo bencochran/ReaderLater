@@ -1,0 +1,14 @@
+# xcode noise
+build/*
+*/build/*
+*.pbxuser
+*.mode1v3
+xcuserdata
+*.xcodeproj/project.xcworkspace
+
+# old school
+.svn
+
+# osx noise
+.DS_Store
+profile

@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81B319115A68FD900C8F6A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B81B319315A68FD900C8F6A3 /* Localizable.strings */; };
 		B8CA03D915A6689700774EF5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA03D815A6689700774EF5 /* Cocoa.framework */; };
 		B8CA03E315A6689800774EF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8CA03E115A6689800774EF5 /* InfoPlist.strings */; };
+		B8CA03EC15A669A300774EF5 /* BCReaderLater.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA03EB15A669A300774EF5 /* BCReaderLater.m */; };
+		B8CA03F115A66A7900774EF5 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA03F015A66A7900774EF5 /* JRSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81B319215A68FD900C8F6A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B8CA03D515A6689700774EF5 /* ReaderLater.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaderLater.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CA03D815A6689700774EF5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B8CA03DB15A6689700774EF5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B8CA03DC15A6689700774EF5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B8CA03DD15A6689700774EF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B8CA03E015A6689800774EF5 /* ReaderLater-Info.plist */ = {isa = PBXFileReference; path = "ReaderLater-Info.plist"; sourceTree = "<group>"; };
+		B8CA03E015A6689800774EF5 /* ReaderLater-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReaderLater-Info.plist"; sourceTree = "<group>"; };
 		B8CA03E215A6689800774EF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B8CA03E415A6689800774EF5 /* ReaderLater-Prefix.pch */ = {isa = PBXFileReference; path = "ReaderLater-Prefix.pch"; sourceTree = "<group>"; };
+		B8CA03E415A6689800774EF5 /* ReaderLater-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReaderLater-Prefix.pch"; sourceTree = "<group>"; };
+		B8CA03EA15A669A300774EF5 /* BCReaderLater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCReaderLater.h; sourceTree = "<group>"; };
+		B8CA03EB15A669A300774EF5 /* BCReaderLater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCReaderLater.m; sourceTree = "<group>"; };
+		B8CA03EF15A66A7900774EF5 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		B8CA03F015A66A7900774EF5 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				B8CA03DE15A6689700774EF5 /* ReaderLater */,
+				B8CA03ED15A66A5400774EF5 /* External */,
 				B8CA03D715A6689700774EF5 /* Frameworks */,
 				B8CA03D615A6689700774EF5 /* Products */,
 			);
@@ -74,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				B8CA03DF15A6689800774EF5 /* Supporting Files */,
+				B8CA03EA15A669A300774EF5 /* BCReaderLater.h */,
+				B8CA03EB15A669A300774EF5 /* BCReaderLater.m */,
 			);
 			path = ReaderLater;
 			sourceTree = "<group>";
@@ -84,8 +95,27 @@
 				B8CA03E015A6689800774EF5 /* ReaderLater-Info.plist */,
 				B8CA03E115A6689800774EF5 /* InfoPlist.strings */,
 				B8CA03E415A6689800774EF5 /* ReaderLater-Prefix.pch */,
+				B81B319315A68FD900C8F6A3 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8CA03ED15A66A5400774EF5 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA03EE15A66A6B00774EF5 /* JRSwizzle */,
+			);
+			name = External;
+			path = external;
+			sourceTree = SOURCE_ROOT;
+		};
+		B8CA03EE15A66A6B00774EF5 /* JRSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA03EF15A66A7900774EF5 /* JRSwizzle.h */,
+				B8CA03F015A66A7900774EF5 /* JRSwizzle.m */,
+			);
+			path = JRSwizzle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,7 +144,9 @@
 		B8CA03CC15A6689700774EF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BC;
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Ben Cochran";
 			};
 			buildConfigurationList = B8CA03CF15A6689700774EF5 /* Build configuration list for PBXProject "ReaderLater" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -139,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8CA03E315A6689800774EF5 /* InfoPlist.strings in Resources */,
+				B81B319115A68FD900C8F6A3 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,12 +182,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CA03EC15A669A300774EF5 /* BCReaderLater.m in Sources */,
+				B8CA03F115A66A7900774EF5 /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B81B319315A68FD900C8F6A3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B81B319215A68FD900C8F6A3 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B8CA03E115A6689800774EF5 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -214,10 +257,12 @@
 		B8CA03E815A6689800774EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReaderLater/ReaderLater-Prefix.pch";
 				INFOPLIST_FILE = "ReaderLater/ReaderLater-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "/Users/bencochran/Library/Application Support/SIMBL/Plugins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -226,10 +271,12 @@
 		B8CA03E915A6689800774EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReaderLater/ReaderLater-Prefix.pch";
 				INFOPLIST_FILE = "ReaderLater/ReaderLater-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "/Users/bencochran/Library/Application Support/SIMBL/Plugins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -254,6 +301,7 @@
 				B8CA03E915A6689800774EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
