@@ -32,9 +32,9 @@
 			<key>BundleIdentifier</key>
 			<string>com.apple.Safari</string>
 			<key>MaxBundleVersion</key>
-			<string>7536</string>
+			<string>8536</string>
 			<key>MinBundleVersion</key>
-			<string>7534</string>
+			<string>8536</string>
 		</dict>
 	</array>
 </dict>
