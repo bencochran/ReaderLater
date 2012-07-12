@@ -145,7 +145,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BC;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Ben Cochran";
 			};
 			buildConfigurationList = B8CA03CF15A6689700774EF5 /* Build configuration list for PBXProject "ReaderLater" */;
@@ -257,6 +257,7 @@
 		B8CA03E815A6689800774EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -271,6 +272,7 @@
 		B8CA03E915A6689800774EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReaderLater/ReaderLater-Prefix.pch";
 				INFOPLIST_FILE = "ReaderLater/ReaderLater-Info.plist";
